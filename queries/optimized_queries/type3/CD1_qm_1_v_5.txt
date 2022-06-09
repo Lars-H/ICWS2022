@@ -1,0 +1,27 @@
+SELECT ?predicate ?object WHERE  {
+  { 
+{{ SERVICE <http://sparql-server.url:8929/sparql> { <http://dbpedia.org/resource/Barack_Obama> ?predicate ?object . } }
+} }
+UNION{ 
+{{ SERVICE <http://sparql-server.url:8921/sparql> { ?subject <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> . } }
+} {{ SERVICE <http://sparql-server.url:8894/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8924/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8899/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8896/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8928/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8917/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8925/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8923/sparql> { ?subject ?predicate ?object . } }
+} }
+
+}

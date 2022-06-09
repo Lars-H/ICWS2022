@@ -1,0 +1,23 @@
+SingleSourceQuery @sparql_localhost_sw_0
+   QueryRoot
+      Projection
+         ProjectionElemList
+            ProjectionElem "proceedings"
+            ProjectionElem "paper"
+            ProjectionElem "p"
+         NJoin
+            ExclusiveStatement
+               Var (name=proceedings)
+               Var (name=-const-1, value=http://data.semanticweb.org/ns/swc/ontology#relatedToEvent, anonymous)
+               Var (name=-const-2, value=http://data.semanticweb.org/conference/eswc/2010, anonymous)
+               StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=paper)
+               Var (name=-const-3, value=http://data.semanticweb.org/ns/swc/ontology#isPartOf, anonymous)
+               Var (name=proceedings)
+               StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=paper)
+               Var (name=-const-4, value=http://swrc.ontoware.org/ontology#author, anonymous)
+               Var (name=p)
+               StatementSource (id=sparql_localhost_sw_0, type=REMOTE)

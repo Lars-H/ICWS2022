@@ -1,0 +1,8 @@
+SELECT ?role ?p ?paper ?proceedings WHERE  {
+  SERVICE <http://sparql-server.url:8893/sparql> { ?role <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/conference/eswc/2010> . }
+ SERVICE <http://sparql-server.url:8893/sparql> { ?role <http://data.semanticweb.org/ns/swc/ontology#heldBy> ?p . }
+ SERVICE <http://sparql-server.url:8893/sparql> { ?paper <http://swrc.ontoware.org/ontology#author> ?p . }
+ SERVICE <http://sparql-server.url:8893/sparql> { ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ?proceedings . }
+ SERVICE <http://sparql-server.url:8893/sparql> { ?proceedings <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/conference/eswc/2010> . }
+
+}

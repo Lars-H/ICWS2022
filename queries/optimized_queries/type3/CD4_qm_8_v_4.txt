@@ -1,0 +1,11 @@
+SELECT ?actor ?news WHERE  {
+  {{ SERVICE <http://sparql-server.url:8895/sparql> { ?film <http://purl.org/dc/terms/title> "Tarzan". } }
+} {{ SERVICE <http://sparql-server.url:8895/sparql> { ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . } }
+} {{ SERVICE <http://sparql-server.url:8922/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+} {{ SERVICE <http://sparql-server.url:8897/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+} {{ SERVICE <http://sparql-server.url:8911/sparql> { ?y <http://data.nytimes.com/elements/topicPage> ?news . } }
+}
+}

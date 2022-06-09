@@ -1,0 +1,49 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "n"
+         ProjectionElem "p2"
+         ProjectionElem "u"
+      NJoin
+         StatementSourcePattern
+            Var (name=n)
+            Var (name=-const-1, value=http://www.w3.org/2004/02/skos/core#subject, anonymous)
+            Var (name=-const-2, value=http://dbpedia.org/resource/Category:Chancellors_of_Germany, anonymous)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_2, type=REMOTE)
+         StatementSourcePattern
+            Var (name=n)
+            Var (name=-const-3, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=p2)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_2, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_2, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_2, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_2, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_2, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_2, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_2, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_2, type=REMOTE)
+         StatementSourcePattern
+            Var (name=p2)
+            Var (name=-const-4, value=http://data.nytimes.com/elements/latest_use, anonymous)
+            Var (name=u)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_2, type=REMOTE)

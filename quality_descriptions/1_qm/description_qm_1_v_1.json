@@ -1,0 +1,127 @@
+{
+  "sources": {
+    "sparql_localhost_chebi_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8894/sparql",
+      "qm_0": 0.449
+    },
+    "sparql_localhost_chebi_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8914/sparql",
+      "qm_0": 0.162
+    },
+    "sparql_localhost_chebi_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8924/sparql",
+      "qm_0": 0.496
+    },
+    "sparql_localhost_dbpedia_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8895/sparql",
+      "qm_0": 0.753
+    },
+    "sparql_localhost_dbpedia_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8915/sparql",
+      "qm_0": 0.127
+    },
+    "sparql_localhost_dbpedia_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8925/sparql",
+      "qm_0": 0.626
+    },
+    "sparql_localhost_drugbank_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8892/sparql",
+      "qm_0": 0.641
+    },
+    "sparql_localhost_drugbank_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8912/sparql",
+      "qm_0": 0.841
+    },
+    "sparql_localhost_drugbank_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8922/sparql",
+      "qm_0": 0.775
+    },
+    "sparql_localhost_linkedmdb_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8899/sparql",
+      "qm_0": 0.084
+    },
+    "sparql_localhost_linkedmdb_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8929/sparql",
+      "qm_0": 0.488
+    },
+    "sparql_localhost_linkedmdb_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8929/sparql",
+      "qm_0": 0.547
+    },
+    "sparql_localhost_kegg_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8897/sparql",
+      "qm_0": 0.863
+    },
+    "sparql_localhost_kegg_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8917/sparql",
+      "qm_0": 0.476
+    },
+    "sparql_localhost_kegg_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8927/sparql",
+      "qm_0": 0.955
+    },
+    "sparql_localhost_nytimes_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8891/sparql",
+      "qm_0": 0.916
+    },
+    "sparql_localhost_nytimes_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8911/sparql",
+      "qm_0": 0.713
+    },
+    "sparql_localhost_nytimes_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8921/sparql",
+      "qm_0": 0.176
+    },
+    "sparql_localhost_geonames_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8896/sparql",
+      "qm_0": 0.069
+    },
+    "sparql_localhost_geonames_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8916/sparql",
+      "qm_0": 0.815
+    },
+    "sparql_localhost_geonames_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8926/sparql",
+      "qm_0": 0.271
+    },
+    "sparql_localhost_jamendo_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8898/sparql",
+      "qm_0": 0.117
+    },
+    "sparql_localhost_jamendo_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8918/sparql",
+      "qm_0": 0.372
+    },
+    "sparql_localhost_jamendo_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8928/sparql",
+      "qm_0": 0.921
+    },
+    "sparql_localhost_spbench_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8900/sparql",
+      "qm_0": 0.474
+    },
+    "sparql_localhost_spbench_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8920/sparql",
+      "qm_0": 0.212
+    },
+    "sparql_localhost_spbench_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8930/sparql",
+      "qm_0": 0.452
+    },
+    "sparql_localhost_sw_0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8895/sparql",
+      "qm_0": 0.195
+    },
+    "sparql_localhost_sw_1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8915/sparql",
+      "qm_0": 0.493
+    },
+    "sparql_localhost_sw_2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8925/sparql",
+      "qm_0": 0.755
+    }
+  },
+  "metrics": {
+    "qm_0": "mean"
+  }
+}

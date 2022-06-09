@@ -1,0 +1,8 @@
+SELECT ?president ?party ?page WHERE  {
+  {{ SERVICE <http://sparql-server.url:8929/sparql> { ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> . } }
+} {{ SERVICE <http://sparql-server.url:8929/sparql> { ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> . } }
+} {{ SERVICE <http://sparql-server.url:8929/sparql> { ?president <http://dbpedia.org/ontology/party> ?party . } }
+} {{ SERVICE <http://sparql-server.url:8916/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+} {{ SERVICE <http://sparql-server.url:8921/sparql> { ?x <http://data.nytimes.com/elements/topicPage> ?page . } }
+}
+}

@@ -1,0 +1,47 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "actor"
+         ProjectionElem "news"
+      NJoin
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=film)
+               Var (name=-const-1, value=http://purl.org/dc/terms/title, anonymous)
+               Var (name=-const-2, value="Tarzan", anonymous)
+               StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=film)
+               Var (name=-const-3, value=http://data.linkedmdb.org/resource/movie/actor, anonymous)
+               Var (name=actor)
+               StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            LocalVars (film)
+         StatementSourcePattern
+            Var (name=actor)
+            Var (name=-const-4, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=x)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=y)
+            Var (name=-const-5, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=x)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         ExclusiveStatement
+            Var (name=y)
+            Var (name=-const-6, value=http://data.nytimes.com/elements/topicPage, anonymous)
+            Var (name=news)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)

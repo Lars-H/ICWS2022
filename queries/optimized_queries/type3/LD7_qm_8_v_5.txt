@@ -1,0 +1,6 @@
+SELECT ?x ?n WHERE  {
+  {{ SERVICE <http://sparql-server.url:8926/sparql> { ?x <http://www.geonames.org/ontology#parentFeature> <http://sws.geonames.org/2921044/> . } }
+} {{ SERVICE <http://sparql-server.url:8926/sparql> { ?x <http://www.geonames.org/ontology#name> ?n . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?x <http://www.geonames.org/ontology#name> ?n . } }
+}
+}

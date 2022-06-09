@@ -1,0 +1,36 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "drug"
+         ProjectionElem "title"
+      NJoin
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=drug)
+               Var (name=-const-1, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory, anonymous)
+               Var (name=-const-2, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient, anonymous)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=drug)
+               Var (name=-const-3, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber, anonymous)
+               Var (name=id)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+         ExclusiveStatement
+            Var (name=keggDrug)
+            Var (name=-const-4, value=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, anonymous)
+            Var (name=-const-5, value=http://bio2rdf.org/ns/kegg#Drug, anonymous)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=keggDrug)
+            Var (name=-const-6, value=http://bio2rdf.org/ns/bio2rdf#xRef, anonymous)
+            Var (name=id)
+            StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=keggDrug)
+            Var (name=-const-7, value=http://purl.org/dc/elements/1.1/title, anonymous)
+            Var (name=title)
+            StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)

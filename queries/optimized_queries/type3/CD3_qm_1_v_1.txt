@@ -1,0 +1,23 @@
+SELECT ?president ?party ?page WHERE  {
+  {{ SERVICE <http://sparql-server.url:8899/sparql> { ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?president <http://dbpedia.org/ontology/party> ?party . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8919/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8929/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8896/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8925/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+ UNION { SERVICE <http://sparql-server.url:8923/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?president . } }
+} {{ SERVICE <http://sparql-server.url:8891/sparql> { ?x <http://data.nytimes.com/elements/topicPage> ?page . } }
+}
+}

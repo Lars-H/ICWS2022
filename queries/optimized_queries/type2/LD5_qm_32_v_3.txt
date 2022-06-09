@@ -1,0 +1,10 @@
+SELECT ?a ?n WHERE  {
+  {{ SERVICE <http://sparql-server.url:8899/sparql> { ?a <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Michael_Jackson> . } }
+ UNION { SERVICE <http://sparql-server.url:8919/sparql> { ?a <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Michael_Jackson> . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Album> . } }
+ UNION { SERVICE <http://sparql-server.url:8919/sparql> { ?a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Album> . } }
+} {{ SERVICE <http://sparql-server.url:8919/sparql> { ?a <http://xmlns.com/foaf/0.1/name> ?n . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?a <http://xmlns.com/foaf/0.1/name> ?n . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?a <http://xmlns.com/foaf/0.1/name> ?n . } }
+}
+}

@@ -1,0 +1,40 @@
+SELECT ?predicate ?object WHERE  {
+  { 
+{{ SERVICE <http://sparql-server.url:8892/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object . } }
+} }
+UNION{ 
+{{ SERVICE <http://sparql-server.url:8892/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff . } }
+} {{ SERVICE <http://sparql-server.url:8894/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8914/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8924/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8899/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8919/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8929/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8892/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8896/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8926/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8898/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8928/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8917/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8927/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8925/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8923/sparql> { ?caff ?predicate ?object . } }
+} }
+
+}

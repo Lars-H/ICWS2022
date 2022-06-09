@@ -1,0 +1,4 @@
+SELECT ?drug ?melt WHERE  {
+  {{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint> ?melt . } }
+}
+}

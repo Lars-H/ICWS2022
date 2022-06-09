@@ -1,0 +1,10 @@
+SELECT ?drugDesc ?cpd ?equation WHERE  {
+  {{ SERVICE <http://sparql-server.url:8922/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/cathartics> . } }
+} {{ SERVICE <http://sparql-server.url:8922/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?cpd . } }
+} {{ SERVICE <http://sparql-server.url:8922/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?drugDesc . } }
+} {{ SERVICE <http://sparql-server.url:8917/sparql> { ?enzyme <http://bio2rdf.org/ns/kegg#xSubstrate> ?cpd . } }
+} {{ SERVICE <http://sparql-server.url:8917/sparql> { ?enzyme <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Enzyme> . } }
+} {{ SERVICE <http://sparql-server.url:8917/sparql> { ?reaction <http://bio2rdf.org/ns/kegg#xEnzyme> ?enzyme . } }
+} {{ SERVICE <http://sparql-server.url:8917/sparql> { ?reaction <http://bio2rdf.org/ns/kegg#equation> ?equation . } }
+}
+}

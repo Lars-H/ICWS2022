@@ -1,0 +1,20 @@
+SELECT ?location ?news WHERE  {
+  {{ SERVICE <http://sparql-server.url:8921/sparql> { ?parent <http://www.geonames.org/ontology#name> "California". } }
+} {{ SERVICE <http://sparql-server.url:8921/sparql> { ?location <http://www.geonames.org/ontology#parentFeature> ?parent . } }
+} {{ SERVICE <http://sparql-server.url:8929/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8892/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8896/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8926/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8927/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8925/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+} {{ SERVICE <http://sparql-server.url:8921/sparql> { ?y <http://data.nytimes.com/elements/topicPage> ?news . } }
+}
+}

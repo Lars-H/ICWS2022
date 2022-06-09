@@ -1,0 +1,12 @@
+SELECT ?drug ?keggUrl ?chebiImage WHERE  {
+  {{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> . } }
+} {{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?keggDrug . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?keggDrug . } }
+} {{ SERVICE <http://sparql-server.url:8917/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#url> ?keggUrl . } }
+} {{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> ?drugBankName . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> ?drugBankName . } }
+} {{ SERVICE <http://sparql-server.url:8913/sparql> { ?chebiDrug <http://purl.org/dc/elements/1.1/title> ?drugBankName . } }
+} {{ SERVICE <http://sparql-server.url:8894/sparql> { ?chebiDrug <http://bio2rdf.org/ns/bio2rdf#image> ?chebiImage . } }
+}
+}

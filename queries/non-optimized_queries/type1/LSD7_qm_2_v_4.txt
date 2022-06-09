@@ -1,0 +1,14 @@
+SELECT ?drug ?transform ?mass WHERE  {
+  { 
+SERVICE <http://sparql-server.url:8892/sparql>  {
+  ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals".  
+ ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?cas .  }
+ {{ SERVICE <http://sparql-server.url:8894/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?cas . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?cas . } }
+} SERVICE <http://sparql-server.url:8897/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> ?mass.} FILTER( ?mass > "5")
+ }
+ OPTIONAL { 
+SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?transform . }
+ }
+
+}

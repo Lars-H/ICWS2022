@@ -1,0 +1,11 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "drug"
+         ProjectionElem "melt"
+      StatementSourcePattern
+         Var (name=drug)
+         Var (name=-const-1, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint, anonymous)
+         Var (name=melt)
+         StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+         StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)

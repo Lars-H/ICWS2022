@@ -1,0 +1,40 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "president"
+         ProjectionElem "party"
+         ProjectionElem "page"
+      NJoin
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=president)
+               Var (name=-const-1, value=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, anonymous)
+               Var (name=-const-2, value=http://dbpedia.org/ontology/President, anonymous)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=president)
+               Var (name=-const-3, value=http://dbpedia.org/ontology/nationality, anonymous)
+               Var (name=-const-4, value=http://dbpedia.org/resource/United_States, anonymous)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=president)
+               Var (name=-const-5, value=http://dbpedia.org/ontology/party, anonymous)
+               Var (name=party)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-7, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=president)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         ExclusiveStatement
+            Var (name=x)
+            Var (name=-const-6, value=http://data.nytimes.com/elements/topicPage, anonymous)
+            Var (name=page)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)

@@ -1,0 +1,21 @@
+SELECT ?Drug ?IntDrug ?IntEffect WHERE  {
+  {{ SERVICE <http://sparql-server.url:8899/sparql> { ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> . } }
+} {{ SERVICE <http://sparql-server.url:8919/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8929/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8892/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8926/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8927/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+ UNION { SERVICE <http://sparql-server.url:8923/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+} {{ SERVICE <http://sparql-server.url:8912/sparql> { ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y . } }
+} {{ SERVICE <http://sparql-server.url:8912/sparql> { ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug . } }
+} {{ SERVICE <http://sparql-server.url:8912/sparql> { ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . } }
+}
+}

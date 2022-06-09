@@ -1,0 +1,6 @@
+SELECT ?paper ?p ?n WHERE  {
+  {{ SERVICE <http://sparql-server.url:8913/sparql> { ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2008/poster_demo_proceedings> . } }
+} {{ SERVICE <http://sparql-server.url:8913/sparql> { ?paper <http://swrc.ontoware.org/ontology#author> ?p . } }
+} {{ SERVICE <http://sparql-server.url:8897/sparql> { ?p <http://www.w3.org/2000/01/rdf-schema#label> ?n . } }
+}
+}

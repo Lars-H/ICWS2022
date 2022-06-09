@@ -1,0 +1,18 @@
+SELECT ?director ?film ?x ?y ?n WHERE  {
+  {{ SERVICE <http://sparql-server.url:8919/sparql> { ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> . } }
+} {{ SERVICE <http://sparql-server.url:8919/sparql> { ?film <http://dbpedia.org/ontology/director> ?director . } }
+} {{ SERVICE <http://sparql-server.url:8919/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8926/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8898/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8925/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+ UNION { SERVICE <http://sparql-server.url:8923/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+} {{ SERVICE <http://sparql-server.url:8898/sparql> { ?x <http://xmlns.com/foaf/0.1/based_near> ?y . } }
+} {{ SERVICE <http://sparql-server.url:8926/sparql> { ?y <http://www.geonames.org/ontology#officialName> ?n . } }
+}
+}

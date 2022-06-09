@@ -1,0 +1,28 @@
+SELECT ?actor ?news WHERE  {
+  {{ SERVICE <http://sparql-server.url:8895/sparql> { ?film <http://purl.org/dc/terms/title> "Tarzan". } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?film <http://purl.org/dc/terms/title> "Tarzan". } }
+} {{ SERVICE <http://sparql-server.url:8895/sparql> { ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8892/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8898/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8892/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8896/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8917/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+} {{ SERVICE <http://sparql-server.url:8891/sparql> { ?y <http://data.nytimes.com/elements/topicPage> ?news . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?y <http://data.nytimes.com/elements/topicPage> ?news . } }
+}
+}

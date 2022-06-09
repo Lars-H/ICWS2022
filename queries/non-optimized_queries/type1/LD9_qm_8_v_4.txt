@@ -1,0 +1,5 @@
+SELECT ?x ?p WHERE  {
+  SERVICE <http://sparql-server.url:8899/sparql> { ?x <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:FIFA_World_Cup-winning_countries> . }
+ SERVICE <http://sparql-server.url:8899/sparql> { ?p <http://dbpedia.org/ontology/managerClub> ?x . }
+ 
+}

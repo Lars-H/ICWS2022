@@ -1,0 +1,13 @@
+SELECT ?paper ?p ?x ?n WHERE  {
+  {{ SERVICE <http://sparql-server.url:8893/sparql> { ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2008/poster_demo_proceedings> . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?paper <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/conference/iswc/2008/poster_demo_proceedings> . } }
+} {{ SERVICE <http://sparql-server.url:8893/sparql> { ?paper <http://swrc.ontoware.org/ontology#author> ?p . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?paper <http://swrc.ontoware.org/ontology#author> ?p . } }
+} {{ SERVICE <http://sparql-server.url:8912/sparql> { ?p <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?p <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?p <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+ UNION { SERVICE <http://sparql-server.url:8923/sparql> { ?p <http://www.w3.org/2002/07/owl#sameAs> ?x . } }
+} {{ SERVICE <http://sparql-server.url:8912/sparql> { ?p <http://www.w3.org/2000/01/rdf-schema#label> ?n . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?p <http://www.w3.org/2000/01/rdf-schema#label> ?n . } }
+}
+}

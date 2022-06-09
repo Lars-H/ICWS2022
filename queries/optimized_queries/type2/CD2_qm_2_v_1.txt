@@ -1,0 +1,6 @@
+SELECT ?party ?page WHERE  {
+  {{ SERVICE <http://sparql-server.url:8919/sparql> { <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party . } }
+} {{ SERVICE <http://sparql-server.url:8891/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> . } }
+} {{ SERVICE <http://sparql-server.url:8891/sparql> { ?x <http://data.nytimes.com/elements/topicPage> ?page . } }
+}
+}

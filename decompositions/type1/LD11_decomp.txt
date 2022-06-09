@@ -1,0 +1,45 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "x"
+         ProjectionElem "y"
+         ProjectionElem "d"
+         ProjectionElem "p"
+         ProjectionElem "l"
+      NJoin
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=x)
+               Var (name=-const-1, value=http://dbpedia.org/ontology/team, anonymous)
+               Var (name=-const-2, value=http://dbpedia.org/resource/Eintracht_Frankfurt, anonymous)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=x)
+               Var (name=-const-4, value=http://dbpedia.org/ontology/birthDate, anonymous)
+               Var (name=d)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=x)
+               Var (name=-const-5, value=http://dbpedia.org/ontology/birthPlace, anonymous)
+               Var (name=p)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-3, value=http://www.w3.org/2000/01/rdf-schema#label, anonymous)
+            Var (name=y)
+            StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=p)
+            Var (name=-const-6, value=http://www.w3.org/2000/01/rdf-schema#label, anonymous)
+            Var (name=l)
+            StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)

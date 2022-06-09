@@ -1,0 +1,59 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "drug"
+         ProjectionElem "id"
+         ProjectionElem "s"
+         ProjectionElem "o"
+         ProjectionElem "sub"
+      NJoin
+         StatementSourcePattern
+            Var (name=drug)
+            Var (name=-const-1, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory, anonymous)
+            Var (name=-const-2, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient, anonymous)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=drug)
+            Var (name=-const-3, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber, anonymous)
+            Var (name=id)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=drug)
+            Var (name=-const-4, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=s)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=s)
+            Var (name=-const-5, value=http://xmlns.com/foaf/0.1/name, anonymous)
+            Var (name=o)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=s)
+            Var (name=-const-6, value=http://www.w3.org/2004/02/skos/core#subject, anonymous)
+            Var (name=sub)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_1, type=REMOTE)

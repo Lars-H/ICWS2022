@@ -1,0 +1,49 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "drugDesc"
+         ProjectionElem "cpd"
+         ProjectionElem "equation"
+      NJoin
+         StatementSourcePattern
+            Var (name=drug)
+            Var (name=-const-1, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory, anonymous)
+            Var (name=-const-2, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/cathartics, anonymous)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=drug)
+            Var (name=-const-3, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId, anonymous)
+            Var (name=cpd)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=drug)
+            Var (name=-const-4, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description, anonymous)
+            Var (name=drugDesc)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=enzyme)
+            Var (name=-const-5, value=http://bio2rdf.org/ns/kegg#xSubstrate, anonymous)
+            Var (name=cpd)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=enzyme)
+            Var (name=-const-6, value=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, anonymous)
+            Var (name=-const-7, value=http://bio2rdf.org/ns/kegg#Enzyme, anonymous)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=reaction)
+            Var (name=-const-8, value=http://bio2rdf.org/ns/kegg#xEnzyme, anonymous)
+            Var (name=enzyme)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=reaction)
+            Var (name=-const-9, value=http://bio2rdf.org/ns/kegg#equation, anonymous)
+            Var (name=equation)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_1, type=REMOTE)

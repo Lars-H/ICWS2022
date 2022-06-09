@@ -1,0 +1,112 @@
+{
+  "chebi": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8894/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8914/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8924/sparql"
+    }
+  },
+  "dbpedia": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8899/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8919/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8929/sparql"
+    }
+  },
+  "drugbank": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8892/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8912/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8922/sparql"
+    }
+  },
+  "geonames": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8896/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8916/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8926/sparql"
+    }
+  },
+  "jamendo": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8898/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8918/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8928/sparql"
+    }
+  },
+  "kegg": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8897/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8917/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8927/sparql"
+    }
+  },
+  "linkedmdb": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8895/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8915/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8925/sparql"
+    }
+  },
+  "nytimes": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8891/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8911/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8921/sparql"
+    }
+  },
+  "spbench": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8900/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8920/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8930/sparql"
+    }
+  },
+  "sw": {
+    "0": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8893/sparql"
+    },
+    "1": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8913/sparql"
+    },
+    "2": {
+      "url": "http://aifb-ls3-romulus.aifb.kit.edu:8923/sparql"
+    }
+  }
+}

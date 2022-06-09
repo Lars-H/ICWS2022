@@ -1,0 +1,40 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "Drug"
+         ProjectionElem "IntDrug"
+         ProjectionElem "IntEffect"
+      NJoin
+         ExclusiveStatement
+            Var (name=Drug)
+            Var (name=-const-1, value=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, anonymous)
+            Var (name=-const-2, value=http://dbpedia.org/ontology/Drug, anonymous)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=y)
+            Var (name=-const-3, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=Drug)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=Int)
+               Var (name=-const-4, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1, anonymous)
+               Var (name=y)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=Int)
+               Var (name=-const-5, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2, anonymous)
+               Var (name=IntDrug)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=Int)
+               Var (name=-const-6, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text, anonymous)
+               Var (name=IntEffect)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)

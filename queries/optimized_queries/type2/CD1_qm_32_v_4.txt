@@ -1,0 +1,13 @@
+SELECT ?predicate ?object WHERE  {
+  { 
+{{ SERVICE <http://sparql-server.url:8899/sparql> { <http://dbpedia.org/resource/Barack_Obama> ?predicate ?object . } }
+} }
+UNION{ 
+{{ SERVICE <http://sparql-server.url:8891/sparql> { ?subject <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> . } }
+} {{ SERVICE <http://sparql-server.url:8896/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?subject ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?subject ?predicate ?object . } }
+} }
+
+}

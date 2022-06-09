@@ -1,0 +1,30 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "predicate"
+         ProjectionElem "object"
+      NUnion
+         ExclusiveStatement
+            Var (name=-const-1, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201, anonymous)
+            Var (name=predicate)
+            Var (name=object)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+         NJoin
+            ExclusiveStatement
+               Var (name=-const-2, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201, anonymous)
+               Var (name=-const-3, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+               Var (name=caff)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSourcePattern
+               Var (name=caff)
+               Var (name=predicate)
+               Var (name=object)
+               StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_sw_0, type=REMOTE)

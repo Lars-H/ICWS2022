@@ -1,0 +1,32 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "name"
+         ProjectionElem "location"
+         ProjectionElem "news"
+      NJoin
+         ExclusiveStatement
+            Var (name=germany)
+            Var (name=-const-4, value=http://www.geonames.org/ontology#name, anonymous)
+            Var (name=-const-5, value="Federal Republic of Germany", anonymous)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=location)
+            Var (name=-const-3, value=http://www.geonames.org/ontology#parentFeature, anonymous)
+            Var (name=germany)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=artist)
+            Var (name=-const-2, value=http://xmlns.com/foaf/0.1/based_near, anonymous)
+            Var (name=location)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=artist)
+            Var (name=-const-1, value=http://xmlns.com/foaf/0.1/name, anonymous)
+            Var (name=name)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)

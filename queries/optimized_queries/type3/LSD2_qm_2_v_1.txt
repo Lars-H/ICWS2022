@@ -1,0 +1,11 @@
+SELECT ?predicate ?object WHERE  {
+  { 
+{{ SERVICE <http://sparql-server.url:8892/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object . } }
+} }
+UNION{ 
+{{ SERVICE <http://sparql-server.url:8892/sparql> { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff . } }
+} {{ SERVICE <http://sparql-server.url:8919/sparql> { ?caff ?predicate ?object . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?caff ?predicate ?object . } }
+} }
+
+}

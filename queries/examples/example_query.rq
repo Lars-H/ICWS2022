@@ -1,0 +1,21 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bp: <http://bioportal.bio2rdf.org/>
+PREFIX db: <http://drugbank.bio2rdf.org/>
+PREFIX dbp: <http://dbpedia.org/>
+SELECT DISTINCT ?s ?p ?o
+WHERE{
+	{ SERVICE bp:sparql {
+		?s ?label "Bromazepam"@en .
+ 		?s ?p ?o .
+	}}
+	UNION
+	{ SERVICE db:sparql {
+		?s ?label "Bromazepam"@en .
+ 		?s ?p ?o .
+	}}
+	UNION
+	{ SERVICE dbp:sparql {
+		?s ?label "Bromazepam"@en .
+ 		?s ?p ?o .
+	}}
+}

@@ -1,0 +1,8 @@
+SELECT ?Drug ?IntDrug ?IntEffect WHERE  {
+  {{ SERVICE <http://sparql-server.url:8919/sparql> { ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> . } }
+} {{ SERVICE <http://sparql-server.url:8891/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . } }
+} {{ SERVICE <http://sparql-server.url:8892/sparql> { ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y . } }
+} {{ SERVICE <http://sparql-server.url:8892/sparql> { ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug . } }
+} {{ SERVICE <http://sparql-server.url:8892/sparql> { ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . } }
+}
+}

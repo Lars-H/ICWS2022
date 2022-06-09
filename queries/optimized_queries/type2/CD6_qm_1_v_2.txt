@@ -1,0 +1,7 @@
+SELECT ?name ?location ?news WHERE  {
+  {{ SERVICE <http://sparql-server.url:8916/sparql> { ?germany <http://www.geonames.org/ontology#name> "Federal Republic of Germany". } }
+} {{ SERVICE <http://sparql-server.url:8911/sparql> { ?location <http://www.geonames.org/ontology#parentFeature> ?germany . } }
+} {{ SERVICE <http://sparql-server.url:8918/sparql> { ?artist <http://xmlns.com/foaf/0.1/based_near> ?location . } }
+} {{ SERVICE <http://sparql-server.url:8918/sparql> { ?artist <http://xmlns.com/foaf/0.1/name> ?name . } }
+}
+}

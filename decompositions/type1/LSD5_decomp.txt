@@ -1,0 +1,42 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "drug"
+         ProjectionElem "keggUrl"
+         ProjectionElem "chebiImage"
+      NJoin
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=drug)
+               Var (name=-const-1, value=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, anonymous)
+               Var (name=-const-2, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs, anonymous)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=drug)
+               Var (name=-const-3, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId, anonymous)
+               Var (name=keggDrug)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=drug)
+               Var (name=-const-5, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName, anonymous)
+               Var (name=drugBankName)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=keggDrug)
+            Var (name=-const-4, value=http://bio2rdf.org/ns/bio2rdf#url, anonymous)
+            Var (name=keggUrl)
+            StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=chebiDrug)
+            Var (name=-const-6, value=http://purl.org/dc/elements/1.1/title, anonymous)
+            Var (name=drugBankName)
+            StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         ExclusiveStatement
+            Var (name=chebiDrug)
+            Var (name=-const-7, value=http://bio2rdf.org/ns/bio2rdf#image, anonymous)
+            Var (name=chebiImage)
+            StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)

@@ -1,0 +1,21 @@
+SELECT ?drug ?transform ?mass WHERE  {
+  { 
+{{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals". } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals". } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism> "Humans and other mammals". } }
+} {{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?cas . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?cas . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?cas . } }
+} {{ SERVICE <http://sparql-server.url:8894/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?cas . } }
+ UNION { SERVICE <http://sparql-server.url:8924/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?cas . } }
+ UNION { SERVICE <http://sparql-server.url:8917/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?cas . } }
+} {{ SERVICE <http://sparql-server.url:8897/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> ?mass ?mass . } }
+ UNION { SERVICE <http://sparql-server.url:8917/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> ?mass ?mass . } }
+} }
+ OPTIONAL { 
+{{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?transform . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?transform . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> ?transform . } }
+} }
+
+}

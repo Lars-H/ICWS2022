@@ -1,0 +1,8 @@
+SELECT ?drug ?id ?s ?o ?sub WHERE  {
+  {{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> . } }
+} {{ SERVICE <http://sparql-server.url:8892/sparql> { ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id . } }
+} {{ SERVICE <http://sparql-server.url:8911/sparql> { ?drug <http://www.w3.org/2002/07/owl#sameAs> ?s . } }
+} {{ SERVICE <http://sparql-server.url:8898/sparql> { ?s <http://xmlns.com/foaf/0.1/name> ?o . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?s <http://www.w3.org/2004/02/skos/core#subject> ?sub . } }
+}
+}

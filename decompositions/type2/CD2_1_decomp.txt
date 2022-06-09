@@ -1,0 +1,24 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "party"
+         ProjectionElem "page"
+      NJoin
+         StatementSourcePattern
+            Var (name=-const-1, value=http://dbpedia.org/resource/Barack_Obama, anonymous)
+            Var (name=-const-2, value=http://dbpedia.org/ontology/party, anonymous)
+            Var (name=party)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-4, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=-const-5, value=http://dbpedia.org/resource/Barack_Obama, anonymous)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-3, value=http://data.nytimes.com/elements/topicPage, anonymous)
+            Var (name=page)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)

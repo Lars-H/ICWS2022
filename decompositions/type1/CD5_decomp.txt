@@ -1,0 +1,35 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "film"
+         ProjectionElem "director"
+         ProjectionElem "genre"
+      NJoin
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=film)
+               Var (name=-const-1, value=http://dbpedia.org/ontology/director, anonymous)
+               Var (name=director)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=director)
+               Var (name=-const-2, value=http://dbpedia.org/ontology/nationality, anonymous)
+               Var (name=-const-3, value=http://dbpedia.org/resource/Italy, anonymous)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-4, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=film)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         ExclusiveStatement
+            Var (name=x)
+            Var (name=-const-5, value=http://data.linkedmdb.org/resource/movie/genre, anonymous)
+            Var (name=genre)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)

@@ -1,0 +1,38 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "role"
+         ProjectionElem "p"
+         ProjectionElem "paper"
+         ProjectionElem "proceedings"
+      NJoin
+         StatementSourcePattern
+            Var (name=role)
+            Var (name=-const-1, value=http://data.semanticweb.org/ns/swc/ontology#isRoleAt, anonymous)
+            Var (name=-const-2, value=http://data.semanticweb.org/conference/eswc/2010, anonymous)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=role)
+            Var (name=-const-3, value=http://data.semanticweb.org/ns/swc/ontology#heldBy, anonymous)
+            Var (name=p)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=paper)
+            Var (name=-const-4, value=http://swrc.ontoware.org/ontology#author, anonymous)
+            Var (name=p)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=paper)
+            Var (name=-const-5, value=http://data.semanticweb.org/ns/swc/ontology#isPartOf, anonymous)
+            Var (name=proceedings)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=proceedings)
+            Var (name=-const-6, value=http://data.semanticweb.org/ns/swc/ontology#relatedToEvent, anonymous)
+            Var (name=-const-7, value=http://data.semanticweb.org/conference/eswc/2010, anonymous)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_1, type=REMOTE)

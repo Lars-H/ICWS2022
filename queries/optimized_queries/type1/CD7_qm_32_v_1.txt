@@ -1,0 +1,13 @@
+SELECT ?location ?news WHERE  {
+  {{ SERVICE <http://sparql-server.url:8896/sparql> { ?parent <http://www.geonames.org/ontology#name> "California". } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?parent <http://www.geonames.org/ontology#name> "California". } }
+} {{ SERVICE <http://sparql-server.url:8896/sparql> { ?location <http://www.geonames.org/ontology#parentFeature> ?parent . } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?location <http://www.geonames.org/ontology#parentFeature> ?parent . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8892/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+} SERVICE <http://sparql-server.url:8891/sparql> { ?y <http://data.nytimes.com/elements/topicPage> ?news . }
+
+}

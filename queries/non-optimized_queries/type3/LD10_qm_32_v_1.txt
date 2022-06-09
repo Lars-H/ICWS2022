@@ -1,0 +1,33 @@
+SELECT ?n ?p2 ?u WHERE  {
+  {{ SERVICE <http://sparql-server.url:8899/sparql> { ?n <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Chancellors_of_Germany> . } }
+ UNION { SERVICE <http://sparql-server.url:8919/sparql> { ?n <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Chancellors_of_Germany> . } }
+ UNION { SERVICE <http://sparql-server.url:8929/sparql> { ?n <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Chancellors_of_Germany> . } }
+} {{ SERVICE <http://sparql-server.url:8899/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8919/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8929/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8892/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8912/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8922/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8896/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8916/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8926/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8898/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8918/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8928/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8897/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8917/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8927/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8895/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8915/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8925/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8891/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8913/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+ UNION { SERVICE <http://sparql-server.url:8923/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+} {{ SERVICE <http://sparql-server.url:8891/sparql> { ?p2 <http://data.nytimes.com/elements/latest_use> ?u . } }
+ UNION { SERVICE <http://sparql-server.url:8911/sparql> { ?p2 <http://data.nytimes.com/elements/latest_use> ?u . } }
+ UNION { SERVICE <http://sparql-server.url:8921/sparql> { ?p2 <http://data.nytimes.com/elements/latest_use> ?u . } }
+}
+}

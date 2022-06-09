@@ -1,0 +1,16 @@
+SingleSourceQuery @sparql_localhost_drugbank_0
+   QueryRoot
+      Projection
+         ProjectionElemList
+            ProjectionElem "drug"
+            ProjectionElem "melt"
+         Union
+            ExclusiveStatement
+               Var (name=drug)
+               Var (name=-const-1, value=http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint, anonymous)
+               Var (name=melt)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            EmptyStatementPattern
+               Var (name=drug)
+               Var (name=-const-2, value=http://dbpedia.org/ontology/Drug/meltingPoint, anonymous)
+               Var (name=melt)

@@ -1,0 +1,10 @@
+SELECT ?drug ?title WHERE  {
+  SERVICE <http://sparql-server.url:8892/sparql>  {
+  ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> .  
+ ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id .  }
+ SERVICE <http://sparql-server.url:8897/sparql> { ?keggDrug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Drug> . }
+ {{ SERVICE <http://sparql-server.url:8894/sparql> { ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?id . } }
+} {{ SERVICE <http://sparql-server.url:8894/sparql> { ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title . } }
+ UNION { SERVICE <http://sparql-server.url:8893/sparql> { ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title . } }
+}
+}

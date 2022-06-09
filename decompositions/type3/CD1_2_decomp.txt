@@ -1,0 +1,52 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "predicate"
+         ProjectionElem "object"
+      NUnion
+         StatementSourcePattern
+            Var (name=-const-1, value=http://dbpedia.org/resource/Barack_Obama, anonymous)
+            Var (name=predicate)
+            Var (name=object)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_2, type=REMOTE)
+         NJoin
+            StatementSourcePattern
+               Var (name=subject)
+               Var (name=-const-2, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+               Var (name=-const-3, value=http://dbpedia.org/resource/Barack_Obama, anonymous)
+               StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_nytimes_2, type=REMOTE)
+            StatementSourcePattern
+               Var (name=subject)
+               Var (name=predicate)
+               Var (name=object)
+               StatementSource (id=sparql_localhost_chebi_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_chebi_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_chebi_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_dbpedia_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_drugbank_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_drugbank_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_geonames_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_geonames_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_jamendo_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_jamendo_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_kegg_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_kegg_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_linkedmdb_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_linkedmdb_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_nytimes_2, type=REMOTE)
+               StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+               StatementSource (id=sparql_localhost_sw_1, type=REMOTE)
+               StatementSource (id=sparql_localhost_sw_2, type=REMOTE)

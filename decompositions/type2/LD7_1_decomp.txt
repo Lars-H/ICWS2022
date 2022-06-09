@@ -1,0 +1,20 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "x"
+         ProjectionElem "n"
+      NJoin
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-1, value=http://www.geonames.org/ontology#parentFeature, anonymous)
+            Var (name=-const-2, value=http://sws.geonames.org/2921044/, anonymous)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_1, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-3, value=http://www.geonames.org/ontology#name, anonymous)
+            Var (name=n)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_1, type=REMOTE)

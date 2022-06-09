@@ -1,0 +1,7 @@
+SELECT ?location ?news WHERE  {
+  {{ SERVICE <http://sparql-server.url:8926/sparql> { ?parent <http://www.geonames.org/ontology#name> "California". } }
+} {{ SERVICE <http://sparql-server.url:8926/sparql> { ?location <http://www.geonames.org/ontology#parentFeature> ?parent . } }
+} {{ SERVICE <http://sparql-server.url:8913/sparql> { ?y <http://www.w3.org/2002/07/owl#sameAs> ?location . } }
+} {{ SERVICE <http://sparql-server.url:8921/sparql> { ?y <http://data.nytimes.com/elements/topicPage> ?news . } }
+}
+}

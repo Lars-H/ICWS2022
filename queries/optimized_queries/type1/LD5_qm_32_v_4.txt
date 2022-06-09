@@ -1,0 +1,8 @@
+SELECT ?a ?n WHERE  {
+  SERVICE <http://sparql-server.url:8899/sparql>  {
+  ?a <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Michael_Jackson> .  
+ ?a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Album> .  }
+ {{ SERVICE <http://sparql-server.url:8899/sparql> { ?a <http://xmlns.com/foaf/0.1/name> ?n . } }
+ UNION { SERVICE <http://sparql-server.url:8898/sparql> { ?a <http://xmlns.com/foaf/0.1/name> ?n . } }
+}
+}

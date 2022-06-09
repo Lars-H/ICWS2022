@@ -1,0 +1,44 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "director"
+         ProjectionElem "film"
+         ProjectionElem "x"
+         ProjectionElem "y"
+         ProjectionElem "n"
+      NJoin
+         ExclusiveGroup
+            ExclusiveStatement
+               Var (name=director)
+               Var (name=-const-1, value=http://dbpedia.org/ontology/nationality, anonymous)
+               Var (name=-const-2, value=http://dbpedia.org/resource/Italy, anonymous)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            ExclusiveStatement
+               Var (name=film)
+               Var (name=-const-3, value=http://dbpedia.org/ontology/director, anonymous)
+               Var (name=director)
+               StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-4, value=http://www.w3.org/2002/07/owl#sameAs, anonymous)
+            Var (name=film)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_drugbank_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_kegg_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_nytimes_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-5, value=http://xmlns.com/foaf/0.1/based_near, anonymous)
+            Var (name=y)
+            StatementSource (id=sparql_localhost_jamendo_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_linkedmdb_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_sw_0, type=REMOTE)
+         ExclusiveStatement
+            Var (name=y)
+            Var (name=-const-6, value=http://www.geonames.org/ontology#officialName, anonymous)
+            Var (name=n)
+            StatementSource (id=sparql_localhost_geonames_0, type=REMOTE)

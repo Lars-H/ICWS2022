@@ -1,0 +1,24 @@
+QueryRoot
+   Projection
+      ProjectionElemList
+         ProjectionElem "x"
+         ProjectionElem "p"
+      NJoin
+         StatementSourcePattern
+            Var (name=x)
+            Var (name=-const-1, value=http://www.w3.org/2004/02/skos/core#subject, anonymous)
+            Var (name=-const-2, value=http://dbpedia.org/resource/Category:FIFA_World_Cup-winning_countries, anonymous)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_2, type=REMOTE)
+         StatementSourcePattern
+            Var (name=p)
+            Var (name=-const-3, value=http://dbpedia.org/ontology/managerClub, anonymous)
+            Var (name=x)
+            StatementSource (id=sparql_localhost_dbpedia_0, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_1, type=REMOTE)
+            StatementSource (id=sparql_localhost_dbpedia_2, type=REMOTE)
+         EmptyStatementPattern
+            Var (name=p)
+            Var (name=-const-4, value=http://xmlns.com/foaf/0.1/name, anonymous)
+            Var (name=-const-5, value="Luiz Felipe Scolari", anonymous)

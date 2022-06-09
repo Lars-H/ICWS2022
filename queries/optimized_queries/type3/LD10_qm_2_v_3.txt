@@ -1,0 +1,6 @@
+SELECT ?n ?p2 ?u WHERE  {
+  {{ SERVICE <http://sparql-server.url:8929/sparql> { ?n <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Chancellors_of_Germany> . } }
+} {{ SERVICE <http://sparql-server.url:8915/sparql> { ?n <http://www.w3.org/2002/07/owl#sameAs> ?p2 . } }
+} {{ SERVICE <http://sparql-server.url:8921/sparql> { ?p2 <http://data.nytimes.com/elements/latest_use> ?u . } }
+}
+}

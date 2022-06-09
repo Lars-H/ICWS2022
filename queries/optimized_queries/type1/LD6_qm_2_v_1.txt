@@ -1,0 +1,9 @@
+SELECT ?director ?film ?x ?y ?n WHERE  {
+  SERVICE <http://sparql-server.url:8899/sparql>  {
+  ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .  
+ ?film <http://dbpedia.org/ontology/director> ?director .  }
+ {{ SERVICE <http://sparql-server.url:8893/sparql> { ?x <http://www.w3.org/2002/07/owl#sameAs> ?film . } }
+} {{ SERVICE <http://sparql-server.url:8893/sparql> { ?x <http://xmlns.com/foaf/0.1/based_near> ?y . } }
+} SERVICE <http://sparql-server.url:8896/sparql> { ?y <http://www.geonames.org/ontology#officialName> ?n . }
+
+}
