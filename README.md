@@ -58,3 +58,14 @@ Get Help:
 ```bash
 python3 execute_query.py --help
 ``` 
+
+## How to Cite
+```
+Lars Heling, Maribel Acosta. 
+"Utility-aware Semantics for Alternative Service Expressions in Federated SPARQL Queries" 
+IEEE International Conference On Web Services 2022.
+```
+
+## License
+
+This project is licensed under the MIT License.
